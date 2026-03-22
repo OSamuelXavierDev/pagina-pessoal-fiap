@@ -6,9 +6,9 @@ Este repositório reúne meus projetos de desenvolvimento, com foco em prática,
 ## Paleta de Cores e Logotipo
 ![Logotipo SX](https://ui-avatars.com/api/?background=713F12&color=FFFFFF&name=Samuel+Xavier)
 
-Cor Primária - #713F12
-Cor Secundária - #38BDF8
-Cor Texto - #FFFFFF
+Cor Primária - #713F12 \
+Cor Secundária - #38BDF8 \
+Cor Texto - #FFFFFF \
 
 ## Nome e RM
 Samuel Pedroso Xavier - 569335
