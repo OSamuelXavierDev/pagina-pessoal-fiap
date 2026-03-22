@@ -8,7 +8,7 @@ Este repositório reúne meus projetos de desenvolvimento, com foco em prática,
 
 Cor Primária - #713F12 \
 Cor Secundária - #38BDF8 \
-Cor Texto - #FFFFFF \
+Cor Texto - #FFFFFF 
 
 ## Nome e RM
 Samuel Pedroso Xavier - 569335
