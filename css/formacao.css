@@ -1,0 +1,104 @@
+/* ============================================
+   ARQUIVO: formacao.css
+   DESCRIÇÃO: Estilos da seção "Formação" e tabelas
+   ============================================ */
+
+#formacao table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+#formacao thead {
+    background-color: var(--primary);
+}
+
+#formacao th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: var(--font-weight-bold);
+    border-bottom: 2px solid var(--secondary);
+}
+
+#formacao td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+#formacao tbody tr {
+    transition: background-color var(--transition-fast);
+}
+
+#formacao tbody tr:hover {
+    background-color: var(--light-gray);
+}
+
+#formacao tbody tr:nth-child(odd) {
+    background-color: rgba(255, 251, 235, 0.5);
+}
+
+/* Tabelas com Scroll Horizontal em Mobile */
+@media (max-width: 768px) {
+    #formacao table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-spacing: 0;
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-md);
+    }
+
+    #formacao thead {
+        background-color: var(--primary);
+        display: table;
+        width: 100%;
+    }
+
+    #formacao tbody {
+        display: table;
+        width: 100%;
+    }
+
+    #formacao tr {
+        display: table-row;
+    }
+
+    #formacao th,
+    #formacao td {
+        padding: var(--spacing-md);
+        text-align: left;
+    }
+
+    #formacao thead th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    #formacao table {
+        font-size: var(--font-size-small);
+    }
+
+    #formacao th,
+    #formacao td {
+        padding: var(--spacing-sm);
+    }
+
+    #formacao th {
+        font-size: 12px;
+    }
+
+    #formacao td {
+        font-size: var(--font-size-small);
+    }
+}

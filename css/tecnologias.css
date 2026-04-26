@@ -1,0 +1,54 @@
+/* ============================================
+   ARQUIVO: tecnologias.css
+   DESCRIÇÃO: Estilos da seção "Tecnologias"
+   ============================================ */
+
+#tecnologias ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--spacing-md);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+#tecnologias li {
+    background: linear-gradient(135deg, var(--secondary), #0ea5e9);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    cursor: default;
+}
+
+#tecnologias li:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #tecnologias ul {
+        gap: var(--spacing-xs);
+    }
+
+    #tecnologias li {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #tecnologias ul {
+        gap: 4px;
+    }
+
+    #tecnologias li {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}

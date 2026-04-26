@@ -1,0 +1,84 @@
+/* ============================================
+   ARQUIVO: main.css
+   DESCRIÇÃO: Estilos globais do conteúdo principal
+   ============================================ */
+
+main {
+    min-height: calc(100vh - 200px);
+}
+
+/* Seções Gerais */
+section {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section div {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Artigos Padrão */
+article {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-fast);
+}
+
+article:hover {
+    box-shadow: var(--shadow-md);
+}
+
+article h4 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+article span {
+    display: block;
+    font-size: var(--font-size-small);
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Responsividade do Conteúdo Principal */
+@media (max-width: 768px) {
+    section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    section div {
+        max-width: 100%;
+    }
+
+    article {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: var(--spacing-md);
+    }
+
+    article {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* Animações Suaves */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+}

@@ -1,0 +1,97 @@
+/* ============================================
+   ARQUIVO: sobre.css
+   DESCRIÇÃO: Estilos da seção "Sobre"
+   ============================================ */
+
+/* Seção "Sobre" (Destaque) */
+#sobre {
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+#sobre h2 {
+    font-size: var(--font-size-h1);
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+    border-left: none;
+    padding-left: 0;
+}
+
+#sobre p {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+#sobre a {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--accent);
+    color: var(--white);
+    border-radius: var(--radius);
+    font-weight: var(--font-weight-bold);
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+#sobre a:hover {
+    background-color: #f06784;
+    transform: translateY(-2px);
+}
+
+/* Seção "Sobre Explicativo" */
+#sobre-explicativo img {
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: var(--spacing-md) auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+#sobre-explicativo p {
+    text-align: justify;
+    line-height: var(--line-height-normal);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #sobre {
+        padding: var(--spacing-lg);
+    }
+
+    #sobre h2 {
+        font-size: var(--font-size-h2);
+    }
+
+    #sobre-explicativo img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sobre {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    #sobre h2 {
+        font-size: var(--font-size-h2);
+    }
+
+    #sobre p {
+        font-size: var(--font-size-base);
+    }
+
+    #sobre a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #sobre-explicativo img {
+        max-width: 120px;
+    }
+}
