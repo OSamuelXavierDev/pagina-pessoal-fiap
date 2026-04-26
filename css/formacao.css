@@ -1,5 +1,18 @@
+/* =========================
+   CONTAINER (SCROLL)
+========================= */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =========================
+   TABELA BASE
+========================= */
 #formacao table {
     width: 100%;
+    min-width: 650px; /* força scroll em telas menores */
     border-collapse: collapse;
     margin-top: var(--spacing-md);
     background-color: var(--white);
@@ -8,6 +21,9 @@
     overflow: hidden;
 }
 
+/* =========================
+   HEADER
+========================= */
 #formacao thead {
     background-color: var(--primary);
 }
@@ -19,14 +35,21 @@
     text-align: left;
     font-weight: var(--font-weight-bold);
     border-bottom: 2px solid var(--secondary);
+    white-space: nowrap;
 }
 
+/* =========================
+   CÉLULAS
+========================= */
 #formacao td {
     padding: var(--spacing-md);
     border-bottom: 1px solid var(--border-color);
     vertical-align: top;
 }
 
+/* =========================
+   LINHAS
+========================= */
 #formacao tbody tr {
     transition: background-color var(--transition-fast);
 }
@@ -39,53 +62,29 @@
     background-color: rgba(255, 251, 235, 0.5);
 }
 
+/* =========================
+   RESPONSIVO - TABLET
+========================= */
 @media (max-width: 768px) {
+
     #formacao table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        border-spacing: 0;
-        border-radius: var(--radius-sm);
-        box-shadow: var(--shadow-md);
-    }
-
-    #formacao thead {
-        background-color: var(--primary);
-        display: table;
-        width: 100%;
-    }
-
-    #formacao tbody {
-        display: table;
-        width: 100%;
-    }
-
-    #formacao tr {
-        display: table-row;
-    }
-
-    #formacao th,
-    #formacao td {
-        padding: var(--spacing-md);
-        text-align: left;
-    }
-
-    #formacao thead th {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        white-space: normal;
-    }
-}
-
-@media (max-width: 480px) {
-    #formacao table {
-        font-size: var(--font-size-small);
+        min-width: 600px;
     }
 
     #formacao th,
     #formacao td {
         padding: var(--spacing-sm);
+    }
+}
+
+/* =========================
+   RESPONSIVO - MOBILE
+========================= */
+@media (max-width: 480px) {
+
+    #formacao table {
+        min-width: 520px;
+        font-size: var(--font-size-small);
     }
 
     #formacao th {
