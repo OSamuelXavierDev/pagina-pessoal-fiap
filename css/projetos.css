@@ -1,8 +1,3 @@
-/* ============================================
-   ARQUIVO: projetos.css
-   DESCRIÇÃO: Estilos da seção "Projetos"
-   ============================================ */
-
 #projetos article {
     background-color: var(--white);
     padding: var(--spacing-md);
@@ -60,7 +55,6 @@
     transform: scale(1.05);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     #projetos article {
         padding: var(--spacing-md);

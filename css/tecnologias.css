@@ -1,8 +1,3 @@
-/* ============================================
-   ARQUIVO: tecnologias.css
-   DESCRIÇÃO: Estilos da seção "Tecnologias"
-   ============================================ */
-
 #tecnologias ul {
     list-style: none;
     padding: 0;
@@ -30,7 +25,6 @@
     box-shadow: var(--shadow-md);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     #tecnologias ul {
         gap: var(--spacing-xs);

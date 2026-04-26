@@ -1,13 +1,7 @@
-/* ============================================
-   ARQUIVO: main.css
-   DESCRIÇÃO: Estilos globais do conteúdo principal
-   ============================================ */
-
 main {
     min-height: calc(100vh - 200px);
 }
 
-/* Seções Gerais */
 section {
     padding: var(--spacing-lg);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -22,7 +16,6 @@ section div {
     margin: 0 auto;
 }
 
-/* Artigos Padrão */
 article {
     background-color: var(--white);
     padding: var(--spacing-md);
@@ -49,7 +42,6 @@ article span {
     font-weight: var(--font-weight-bold);
 }
 
-/* Responsividade do Conteúdo Principal */
 @media (max-width: 768px) {
     section {
         padding: var(--spacing-lg) var(--spacing-md);
@@ -76,7 +68,6 @@ article span {
     }
 }
 
-/* Animações Suaves */
 @media (prefers-reduced-motion: no-preference) {
     * {
         transition: background-color var(--transition-fast), color var(--transition-fast);

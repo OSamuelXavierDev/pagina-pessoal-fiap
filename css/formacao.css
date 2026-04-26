@@ -1,8 +1,3 @@
-/* ============================================
-   ARQUIVO: formacao.css
-   DESCRIÇÃO: Estilos da seção "Formação" e tabelas
-   ============================================ */
-
 #formacao table {
     width: 100%;
     border-collapse: collapse;
@@ -44,7 +39,6 @@
     background-color: rgba(255, 251, 235, 0.5);
 }
 
-/* Tabelas com Scroll Horizontal em Mobile */
 @media (max-width: 768px) {
     #formacao table {
         display: block;
