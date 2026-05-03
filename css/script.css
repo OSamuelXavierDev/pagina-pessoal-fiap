@@ -1,0 +1,219 @@
+/**
+ * Estilos para Interações com JavaScript
+ * - Menu Mobile
+ * - Accordion
+ * - Botão Scroll to Top
+ */
+
+/* ========================================
+   1. MENU MOBILE - HAMBURGER BUTTON
+   ======================================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    gap: 6px;
+    transition: all var(--transition-fast);
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ========================================
+   2. ACCORDION - HABILIDADES
+   ======================================== */
+.accordion-item {
+    margin-bottom: var(--spacing-md);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-fast);
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.accordion-button {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--white);
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+    transition: background-color var(--transition-fast);
+}
+
+.accordion-button:hover {
+    background-color: rgba(113, 63, 18, 0.05);
+}
+
+.accordion-button.active {
+    background-color: rgba(113, 63, 18, 0.1);
+}
+
+.accordion-icon {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-style: normal;
+    transition: transform var(--transition-fast);
+}
+
+.accordion-button.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-fast) ease-in-out;
+}
+
+.accordion-body {
+    padding: var(--spacing-md);
+    background-color: rgba(113, 63, 18, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-body li {
+    padding: var(--spacing-sm) 0;
+    color: var(--dark-gray);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.accordion-body li:last-child {
+    border-bottom: none;
+}
+
+/* ========================================
+   3. BOTÃO VOLTAR AO TOPO
+   ======================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: -60px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-fast);
+    z-index: 999;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--secondary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.scroll-to-top.show {
+    bottom: 20px;
+}
+
+/* ========================================
+   RESPONSIVIDADE - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+    /* Mostrar hamburger menu em mobile */
+    .hamburger {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    nav li {
+        padding: var(--spacing-sm) 0;
+    }
+
+    nav a {
+        display: block;
+        padding: var(--spacing-sm) 0;
+        font-size: var(--font-size-base);
+    }
+
+    /* Botão scroll to top mais próximo em mobile */
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: -55px;
+        right: 15px;
+        font-size: 1.3rem;
+    }
+
+    .scroll-to-top.show {
+        bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes adicionais para telas muito pequenas */
+    .hamburger span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    nav ul {
+        padding: var(--spacing-sm);
+    }
+
+    .accordion-button {
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-small);
+    }
+
+    .accordion-body {
+        padding: var(--spacing-sm);
+    }
+
+    .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        font-size: 1.1rem;
+    }
+
+    .scroll-to-top.show {
+        bottom: 10px;
+    }
+}
