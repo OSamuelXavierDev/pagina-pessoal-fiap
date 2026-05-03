@@ -1,0 +1,126 @@
+header {
+    background-color: var(--primary);
+    padding: var(--spacing-lg) var(--spacing-md);
+    box-shadow: var(--shadow-md);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary);
+    flex-shrink: 0;
+    transition: transform var(--transition-fast);
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    flex: 1;
+    min-width: 300px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: rgba(56, 189, 248, 0.2);
+    color: var(--secondary);
+}
+
+@media (max-width: 1024px) {
+    header div {
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+
+    nav {
+        flex: 1 1 100%;
+        order: 2;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: var(--spacing-md);
+    }
+
+    header div {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+
+    nav a {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: var(--spacing-sm);
+    }
+
+    header img {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav ul {
+        gap: var(--spacing-xs);
+    }
+
+    nav a {
+        padding: var(--spacing-xs) 6px;
+        font-size: 12px;
+    }
+}
