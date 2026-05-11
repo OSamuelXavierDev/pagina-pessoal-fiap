@@ -256,17 +256,26 @@ Tenho grande comprometimento com a qualidade da entrega, respeito aos prazos e u
 
                 <div class="contato-container">
 
-                    <form class="form-contato">
+                    <form class="form-contato" id="formContato">
                         <h4>Envie sua mensagem</h4>
 
-                        <label for="nome">Nome *</label>
-                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" placeholder="Seu nome completo" required>
+                            <span class="error-message" id="erro-nome"></span>
+                        </div>
 
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" placeholder="seu@email.com" required>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" placeholder="seu@email.com" required>
+                            <span class="error-message" id="erro-email"></span>
+                        </div>
 
-                        <label for="mensagem">Mensagem *</label>
-                        <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                            <span class="error-message" id="erro-mensagem"></span>
+                        </div>
 
                         <button type="submit">Enviar Mensagem</button>
                     </form>
@@ -287,6 +296,15 @@ Tenho grande comprometimento com a qualidade da entrega, respeito aos prazos e u
             </div>
         </section>
     </main>
+
+    <!-- Modal de Sucesso do Formulário -->
+    <div class="success-modal" id="modalSucesso">
+        <div class="success-modal-content success">
+            <div class="modal-check">✓</div>
+            <h3>Mensagem enviada com sucesso!</h3>
+            <p id="modalMensagem">Obrigado por entrar em contato, Teste! Retornarei em breve.</p>
+        </div>
+    </div>
 
     <footer>
         <div>
