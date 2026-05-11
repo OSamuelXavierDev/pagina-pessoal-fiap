@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/experiencia.css">
     <link rel="stylesheet" href="css/projetos.css">
     <link rel="stylesheet" href="css/contato.css">
+    <!-- Interações JavaScript -->
+    <link rel="stylesheet" href="css/script.css">
     <title>Samuel Xavier - Portfólio</title>
 </head>
 <body>
@@ -34,6 +36,12 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+            <!-- Botão Hamburger para Menu Mobile -->
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -73,27 +81,43 @@ Tenho grande comprometimento com a qualidade da entrega, respeito aos prazos e u
             <div>
                 <h3>Habilidades</h3>
                 
-                <article>
-                    <h4>Hard Skills</h4>
-                    <ul>
-                        <li>Frontend: Desenvolvimento de Interfaces Responsivas, Componentização, Consumo de APIs</li>
-                        <li>Backend: Microsserviços, APIs REST, Integrações, Sistemas Distribuídos</li>
-                        <li>Linguagens: Java, JavaScript, TypeScript, Python, SQL</li>
-                        <li>Bancos de Dados: MySQL, MongoDB, Neo4j, Redis, Postgres</li>
-                        <li>DevOps & Cloud: Docker, CI/CD, Tekton, ArgoCD, Kong, Vault, AWS (S3)</li>
-                        <li>Qualidade: Testes unitários, Code review, Coverage ≥80%</li>
-                    </ul>
-                </article>
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        <span>Hard Skills</span>
+                        <i class="accordion-icon">+</i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Frontend: Desenvolvimento de Interfaces Responsivas, Componentização, Consumo de APIs</li>
+                                <li>Backend: Microsserviços, APIs REST, Integrações, Sistemas Distribuídos</li>
+                                <li>Linguagens: Java, JavaScript, TypeScript, Python, SQL</li>
+                                <li>Bancos de Dados: MySQL, MongoDB, Neo4j, Redis, Postgres</li>
+                                <li>DevOps & Cloud: Docker, CI/CD, Tekton, ArgoCD, Kong, Vault, AWS (S3)</li>
+                                <li>Qualidade: Testes unitários, Code review, Coverage ≥80%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                <article>
-                    <h4>Soft Skills</h4>
-                    <ul>
-                        <li>Trabalho em Equipe e Colaboração</li>
-                        <li>Comunicação Efetiva</li>
-                        <li>Metodologias Ágeis (Scrum, Kanban)</li>
-                        <li>Adaptabilidade e Aprendizado Contínuo</li>
-                    </ul>
-                </article>
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-button">
+                        <span>Soft Skills</span>
+                        <i class="accordion-icon">+</i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Trabalho em Equipe e Colaboração</li>
+                                <li>Comunicação Efetiva</li>
+                                <li>Metodologias Ágeis (Scrum, Kanban)</li>
+                                <li>Adaptabilidade e Aprendizado Contínuo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -270,5 +294,13 @@ Tenho grande comprometimento com a qualidade da entrega, respeito aos prazos e u
             <p>Desenvolvido com dedicação e inovação</p>
         </div>
     </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="scroll-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <span>↑</span>
+    </button>
+
+    <!-- Script de Interações -->
+    <script src="script.js"></script>
 </body>
 </html>
