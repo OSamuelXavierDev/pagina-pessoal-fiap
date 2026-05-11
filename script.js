@@ -214,10 +214,12 @@ function initFormulario() {
             // Exibir modal de sucesso
             exibirModalSucesso(nome);
             
-            // Fechar modal e resetar após 3 segundos
+            // Resetar formulário imediatamente
+            resetarFormulario();
+            
+            // Fechar modal após 3 segundos
             setTimeout(() => {
                 fecharModalSucesso();
-                resetarFormulario();
             }, 3000);
         } else {
             console.log('✗ Formulário inválido. Por favor, corrija os erros.');
